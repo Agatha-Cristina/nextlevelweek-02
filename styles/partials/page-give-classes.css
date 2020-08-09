@@ -3,6 +3,10 @@
     height: 100vh;
 }
 
+#page-give-classes .page-heder .header-content {
+    margin-bottom: 6.4rem;
+}
+
 #page-give-classes main {
     background: var(--color-box-base);
     width: 100%;
@@ -14,7 +18,6 @@
 
 #page-give-classes fieldset {
     border: none;
-
     padding: 0 2.4rem;
 }
 
@@ -22,20 +25,19 @@
     font: 700 2.4rem Archivo;
     color: var(--color-text-title);
     margin-bottom: 2.4rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
-
     padding-bottom: 1.6rem;
     border-bottom: 1px solid var(--color-line-in-white);
 }
 
-#page-give-classes .input-block+.input-block,
-#page-give-classes .input-block+.textarea-block,
-#page-give-classes .input-block+.textarea-block {
+#page-give-classe fieldset+fieldset {
+    margin-top: 6.4rem;
+}
+
+#page-give-classes .input-block+.input-block, #page-give-classes .input-block+.textarea-block, #page-give-classes .select-block+.input-block {
     margin-top: 2.4rem;
 }
 
