@@ -12,8 +12,9 @@
 
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
+    <script src="/scripts/addField.js" defer ></script>
+  
   </head>
   <body id="page-give-classes">
     <div id="container">
@@ -71,17 +72,18 @@
                 <option value="10">Química</option>
               </select>
             </div>
+
             <div class="input-block">
-              <label for="cost">Custo da sua hora/aula
+              <label for="cost"> Custo da sua hora/aula
                 <small>(R$)</small>
               </label>
               <input type="cost" id="cost" type="number" required>
             </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset id="schedule-items">
             <legend>Horários disponíveis
-              <button id="add-time"></button>+ Novo Horário</button>
+              <button type="button" id="add-time">+ Novo Horário</button>
             </legend>
 
             <div class="schedule-item">
@@ -101,14 +103,41 @@
               </div>
               <div class="input-block">
                 <label for="time_from">Das</label>
-                <input type="time" name="time_from[]">
+                <input type="time" name="time_from[]" required>
               </div>
 
               <div class="input-block">
                 <label for="time_to">Até</label>
-                <input type="time" name="time_to[]">
+                <input type="time" name="time_to[]" required>
               </div>             
             </div>
+
+            <div class="schedule-item">
+
+              <div class="select-block">
+                <label for="weekday">Dia da semana</label>
+                <select name="weekday[]" required>
+                  <option value="">Selecione uma opção</option>
+                  <option value="0">Domingo</option>
+                  <option value="1">Segunda-feira</option>
+                  <option value="2">Terça-feira</option>
+                  <option value="3">Quarta-feira</option>
+                  <option value="4">Quinta-feira</option>
+                  <option value="5">Sexta-feira</option>
+                  <option value="6">Sábado</option>
+                </select>
+              </div>
+              <div class="input-block">
+                <label for="time_from">Das</label>
+                <input type="time" name="time_from[]" required>
+              </div>
+
+              <div class="input-block">
+                <label for="time_to">Até</label>
+                <input type="time" name="time_to[]" required>
+              </div>             
+            </div>
+            
           </fieldset>
         </form>
 
@@ -119,7 +148,6 @@
           </p>
           <button type="submit" form="create-class">Salvar cadastro</button>
         </footer>
-        
       </main>
     </div>
   </body>
