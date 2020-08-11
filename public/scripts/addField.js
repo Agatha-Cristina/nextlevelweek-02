@@ -8,10 +8,15 @@ function cloneField() {
     //Duplicar os campos. Que campos?
     const newfieldContainer = document.querySelector('.schedule-item').cloneNode(true) // bolean: true ou false
 
-    //limpar os campos. que campos?
-    const filds = newfieldContainer.querySelectorAll('input')
-    console.log(fields[0].value = "f")
+    //pegar os campos. Que campos?
+    const fields = newfieldContainer.querySelectorAll('input')
+    
+    // para cada campo, limpar
+    fields.forEach(function(field) {
+      //pegar o field no momento e limpa ele
+        field.value = ""
+    })
 
     //Colocar na página. onde???
-    document.querySelector('#schedule-items').appendChild(fields)
+    document.querySelector('#schedule-items').appendChild(newfieldContainer)
 }
